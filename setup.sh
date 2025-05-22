@@ -5,6 +5,19 @@ cd "$(dirname "$0")"
 
 set -euo pipefail # Exit on error, treat unset variables as error, pipefail
 
+ask_yes_no() {
+    local prompt="$1 (y/N): "
+    local answer
+    read -p "$prompt" answer
+    if [[ "${answer}" == "y" || "${answer}" == "Y" ]]; then 
+        return 0 # Yes
+    else
+        return 1 # No
+    fi
+}
+
+echo "🔧 Setting up your system..."
+
 # Step 1: Install Homebrew packages from Brewfile
 if command -v brew &> /dev/null; then
   if ask_yes_no "Do you want to install/update Homebrew packages from Brewfile?"; then

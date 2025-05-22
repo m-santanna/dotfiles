@@ -20,7 +20,7 @@ Personal dotfiles for macOS setup, managing CLI tools, Neovim config, Zsh enviro
 ## 🚀 Installation
 
 We are assuming you don't have any of the directories and files we will be stowing, such as ~/.config/ and ~/.zshrc
-Backup any configurations you still want to have to somewhere like ~/backup/, since you will the opportunity to add them later.
+Backup any configurations you still want to have to somewhere like ~/backup/, since you will have the opportunity to add them later.
 
 ### 1. Install homebrew
 
@@ -30,9 +30,15 @@ If you don't have it:
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### 2. Setup homebrew (if needed)
+### 2. Add homebrew to path
 
-You may find it necessary to run this command, if your homebrew configuration was at ~/.zshrc
+If you had homebrew installed, but once you type the command:
+
+```zsh
+brew
+```
+
+It doesn't work, run the following command.
 
 ```zsh
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
@@ -52,8 +58,6 @@ _Note: We clone to `~/dotfiles`. **stow** will create symlinks from here into ou
 
 ```zsh
 ./setup.sh
-or
-zsh setup.sh
 ```
 
 ### 5. Source .zshrc
