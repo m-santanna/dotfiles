@@ -34,7 +34,7 @@ git clone https://github.com/m-santanna/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ```
 
-_Note: We clone to `~/dotfiles`. `stow` will create symlinks from here into our home directory (`~`)._
+_Note: We clone to `~/dotfiles`. **stow** will create symlinks from here into our home directory (`~`)._
 
 ### 3. Run the setup script
 
@@ -48,13 +48,22 @@ _Note: We clone to `~/dotfiles`. `stow` will create symlinks from here into our 
 
 `GNU Stow` is a symlink farm manager. It takes files from a "source" directory (e.g., `~/dotfiles/zsh`) and creates symlinks to them in a "target" directory (by default, the parent of the source directory, which is `~` since our dotfiles are in `~/dotfiles`).
 
-For example, if you have:
+Imagine a symlink as a pointer. It will create a "pointer" in our home directory, and it will point to our dotfiles directory. The coolest thing is that you can change things in one place, and the other will also update.
+
+For example, in:
 `~/dotfiles/zsh/.zshrc`
 
 Running `stow zsh` (from within `~/dotfiles`) will create a symlink:
 `~/.zshrc` -> `~/dotfiles/zsh/.zshrc`
 
 This keeps our actual configuration files neatly organized in your `~/dotfiles` repository.
+
+#### You can learn more about these things here:
+
+- Typecraft's [Blog post](https://typecraft.dev/tutorial/never-lose-your-configs-again)
+- Typecraft's [YT video](https://www.youtube.com/watch?v=NoFiYOqnC4o)
+- Tamerlan's [Blog post](https://tamerlan.dev/how-i-manage-my-dotfiles-using-gnu-stow/)
+- And of course... [GNU Stow](https://www.gnu.org/software/stow/)
 
 ### Unstowing Packages
 
