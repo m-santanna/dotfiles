@@ -1,3 +1,5 @@
+# Stow: What makes this setup accessible
+brew "stow"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Modern, maintained replacement for ls
