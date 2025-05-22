@@ -1,0 +1,4 @@
+theme = catppuccin-mocha
+font-family = "JetBrainsMono Nerd Font"
+background-opacity = 0.85
+macos-window-shadow = false

@@ -1,0 +1,61 @@
+extends typescript
+
+snippet rfce "export default function() {<div></div>}"
+	export default function ${1:ComponentName}(${2}) {
+		${4}
+		return (
+			<div>${3:text}</div>
+		)
+	}
+
+snippet irh "import react hook"
+	import {use${1:Hook}} from 'react'
+
+snippet uses "useState"
+	const [${1:state}, set${2}] = useState(${3:initialState})
+
+snippet usea "useAtom"
+	const [${1:state}, set${2}] = useAtom(${3:initialState})
+
+snippet useav "useAtomValue"
+	const ${1:value} = useAtomValue(${2:atom})
+
+snippet usesa "useSetAtom"
+	const set${1:Value} = useSetAtom(${2:atom})
+
+# shadcn
+snippet shadb "<Button onClick={...}>...</Button>"
+	<Button variant="${2:variant}" onClick={() => ${3:action}}>${1:Name}</Button>
+
+snippet shadi "<Input />"
+	<Input type="${1:type}" value={${2:value}} onChange={${3:function}} className="${4:className}" />
+
+snippet shadd "<Dialog open={...} onOpenChange={...}>...</Dialog>"
+	<Dialog open={${1:value}} onOpenChange={${2:setValue}}>
+	    <DialogOverlay className="fixed inset-0 bg-black/30 backdrop-blur-sm" />
+            <DialogContent className="sm:max-w-[425px]">
+                <DialogHeader>
+                    <DialogTitle>${3:Title}</DialogTitle>
+                    <DialogDescription>${4:Description}</DialogDescription>
+                </DialogHeader>
+	        ${5}
+	    </DialogContent>
+	</Dialog>
+snippet ishadb "import Button"
+	import { Button } from "@/components/ui/button"
+
+snippet ishadi "import Input"
+	import { Input } from "@/components/ui/input"
+
+
+snippet ishadd "import Dialog"
+	import {
+	    Dialog,
+	    DialogContent,
+	    DialogDescription,
+	    DialogHeader,
+	    DialogTitle,
+	    DialogOverlay,
+	} from '@/components/ui/dialog'
+ 
+

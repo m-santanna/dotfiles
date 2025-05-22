@@ -1,0 +1,6 @@
+.git
+.gitignore
+.stow-local-ignore
+Brewfile
+setup.sh
+README.md

@@ -1,0 +1,15 @@
+extends javascript
+
+# zod
+snippet ztype "export z.infer<typeof ...>"
+	export const ${1:Type} = z.infer<typeof ${2:schema}>
+
+snippet schema "z schema" 
+	const ${1:schema} = z.${2:object}(${3:{}})
+
+# jotai
+snippet atom "export const ... = atom(...)"
+	export const ${1:atom} = atom(${2:value})
+
+snippet atomsto "export const ... = atomWithStorage(...)"
+	export const ${1:atom} = atomWithStorage(${2:key}, ${3:value})

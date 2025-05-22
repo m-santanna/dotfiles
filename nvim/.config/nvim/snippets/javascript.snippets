@@ -1,0 +1,60 @@
+snippet fun "function"
+	function ${1:function_name}(${2}) {
+		${0:${VISUAL}}
+	}
+
+snippet efun "export function"
+	export function ${1:function_name}(${2}) {
+		${0:${VISUAL}}
+	}
+
+snippet afun "async function"
+	async function ${1:function_name}(${2}) {
+		${0:${VISUAL}}
+	}
+
+snippet eafun "export async function"
+	export async function ${1:function_name}(${2}) {
+		${0:${VISUAL}}
+	}
+
+# if
+snippet ifb "if (condition) { ... }"
+	if (${1:true}) {
+		${0:${VISUAL}}
+	}
+
+snippet if "if (condition) ..."
+	if (${1:true}) 
+		${0:${VISUAL}}
+
+snippet ter Ternary: `condition ? true : false`
+	$1 ? $2: $0
+
+snippet for "for (...) {...}"
+	for (let ${1:i} = 0; $1 < $2; $1++) {
+		${0:${VISUAL}}
+	}
+
+snippet cl "console.log"
+	console.log(${0});
+
+snippet imp "import xyz from 'xyz'"
+	import ${1} from '${2:$1}';
+
+snippet af "() =>"
+	(${1}) => ${0:${VISUAL}}
+
+snippet afb "() => {}"
+	(${1}) => {
+		${0:${VISUAL}}
+	}
+
+snippet map "list.map((item) => ...)"
+	${1:list}.map((${2:item}) => ${3:action})
+
+snippet filter "list.filter((item) => ...)"
+	${1:list}.filterl((${2:item}) => ${3:action})
+
+snippet find "list.find((item) => ...)"
+	${1:list}.find((${2:item}) => ${3:action})
