@@ -43,4 +43,4 @@ local catppuccin = {
   end,
 }
 
-return catppuccin
+return tokyonight
