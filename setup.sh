@@ -106,7 +106,24 @@ setup_arch() {
             ripgrep \
             starship \
             tldr \
-            zoxide 
+            zoxide \
+            waybar \
+            hyprland \
+            hyprlock \
+            hypridle \
+            rofi \
+            nvidia \
+            nvidia-utils \
+            blueberry \
+            impala \
+            pavucontrol \
+            ghostty \
+            swww \
+            fastfetch \
+            nautilus \
+            wget \
+
+
     else
         echo "⏩ Skipping package installation from official repositories."
     fi
@@ -126,7 +143,12 @@ setup_arch() {
 
         if command -v yay &> /dev/null; then
             echo "🏗️  Installing AUR packages..."
-            yay -S --needed ttf-jetbrains-mono-nerd
+            yay -S --needed \
+                ttf-jetbrains-mono-nerd \
+                ttf-0xproto-nerd \
+                python-pywal16 \
+                discord \
+                slack-desktop \
         fi
     else
         echo "⏩ Skipping AUR package installation."
@@ -152,6 +174,8 @@ setup_arch() {
     else
         echo "⏩ Skipping symlink. You can install them individually with: stow <dirName>"
     fi
+
+    echo "To install nvim, paste the following command on your terminal: wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash"
 
     echo "👍 Arch Linux setup script finished."
 }
