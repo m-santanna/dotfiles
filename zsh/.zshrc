@@ -1,6 +1,11 @@
 # ----------------- homebrew --------------------------------
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# -------- antidote (zsh plugin manager) --------------------
+source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
+antidote load
+source ~/.zsh_plugins.zsh
+
 # ----------- conda (python env) ----------------------------
 __conda_setup="$('/Users/matheusss03/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
@@ -31,6 +36,10 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # setup fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
+
+# Rebind fzf file search from Ctrl+T to Ctrl+F (Ctrl+T used for tmux new window)
+bindkey -r '^T'
+bindkey '^F' fzf-file-widget
 
 # -- Use fd instead of the default find --
 
@@ -64,3 +73,11 @@ alias cd="z"
 
 # ------------- starship (better prompt) -------------
 eval "$(starship init zsh)"
+
+# ----------------- MANPAGER  ------------------------
+export MANPAGER='nvim +Man!'
+
+# ---------------- OPENCODE --------------------------
+alias oc="opencode"
+export EDITOR=nvim
+export PATH=/Users/matheusss03/.opencode/bin:$PATH
