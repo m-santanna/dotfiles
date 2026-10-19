@@ -7,3 +7,9 @@ mattmc3/zfunctions
 zsh-users/zsh-autosuggestions
 zdharma-continuum/fast-syntax-highlighting kind:defer
 zsh-users/zsh-history-substring-search
+https://github.com/zsh-users/zsh-autosuggestions
+https://github.com/mattmc3/ez-compinit
+https://github.com/mattmc3/zfunctions
+https://github.com/romkatv/zsh-defer
+https://github.com/zsh-users/zsh-completions
+https://github.com/zsh-users/zsh-history-substring-search

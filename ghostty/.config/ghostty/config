@@ -1,4 +1,3 @@
-theme="/home/m-santanna/.cache/wal/ghostty.conf"
 font-family = "JetBrainsMono Nerd Font"
 background-opacity = 0.85
 macos-window-shadow = false

@@ -20,24 +20,12 @@ if [[ "$(uname)" == "Darwin" ]]; then
   source ~/.zsh_plugins.zsh
 
 fi
+export PATH="$(brew --prefix python)/libexec/bin:$PATH"
 
 # =============================================================================
 # Environment & Tool Configurations
 # =============================================================================
 
-# ----------- conda (python env) ----------------------------
-# Use $HOME to make the path portable
-__conda_setup="$('$HOME/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "$HOME/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="$HOME/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
 
 
 # -------------- NVM (node env) ---------------------
@@ -93,20 +81,18 @@ export BAT_THEME="catppuccin_mocha"
 alias ls="eza --color=always --icons=always"
 
 
+# ------------- starship (better prompt) -------------
+# Cross-shell prompt
+eval "$(starship init zsh)"
+
+
+# ----------------- MANPAGER  ------------------------
+export MANPAGER='nvim +Man!'
+
 # ----------------- zoxide ---------------------------
 # A smarter cd command
 eval "$(zoxide init zsh)"
 alias cd="z"
 
-
-# ------------- starship (better prompt) -------------
-# Cross-shell prompt
-eval "$(starship init zsh)"
-
-# ----------------- MANPAGER  ------------------------
-export MANPAGER='nvim +Man!'
-
-# ---------------- OPENCODE --------------------------
-alias oc="opencode"
-export EDITOR=nvim
-export PATH=/Users/matheusss03/.opencode/bin:$PATH
+# ----------------- claude ---------------------------
+alias cc="claude"
