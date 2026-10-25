@@ -72,8 +72,7 @@ _fzf_compgen_dir() {
 
 
 # ------------------- BAT ----------------------------
-# Set your preferred theme for bat
-export BAT_THEME="catppuccin_mocha"
+alias cat="bat"
 
 
 # ------------------- EZA ----------------------------
